@@ -11,60 +11,144 @@
   --bg: #F7FAFC;
   --muted: #8A9AAE;
 }
-body {margin:0; font-family: Arial, sans-serif; line-height:1.6; background: var(--bg); color: var(--dark);}header {background: #fff; padding:2rem; text-align:center; border-bottom:1px solid #eaeaea;}header img.profile {width:150px; height:150px; border-radius:50%; object-fit:cover;}header h2 {margin:1rem 0 0.5rem; font-size:2rem;}header p {margin:0.2rem 0;}main {max-width:1000px; margin:0 auto; padding:2rem;}section {margin-bottom:3rem;}section h2 {font-size:1.8rem; margin-bottom:1rem; border-bottom:2px solid #eaeaea; padding-bottom:0.5rem;}section p {font-size:1rem; color: var(--muted);} .project {margin-bottom:3rem;} .project img {width:100%; height:auto; border-radius:8px; margin-bottom:1rem;} .project table {width:100%; border-collapse:collapse; margin-bottom:1rem;} .project th, .project td {border:1px solid #ddd; padding:0.5rem; text-align:left;} .project th {background:#f0f0f0; width:30%;} .project a.button {display:inline-block; margin-top:1rem; padding:0.5rem 1rem; background: var(--main); color:#fff; text-decoration:none; border-radius:4px;} .project a.button:hover {background: darken(var(--main), 10%);}footer {background:#fff; padding:1rem; text-align:center; border-top:1px solid #eaeaea; font-size:0.9rem; color: var(--muted);}footer a {color: var(--main); text-decoration:none;}footer a:hover {text-decoration:underline;}
+body {margin:0; font-family:"Noto Sans JP", system-ui, sans-serif; color:#222; background:var(--bg); line-height:1.8}
+
+/* ===== HERO ===== */
+header {background:linear-gradient(135deg, var(--dark), #134864); color:#fff; text-align:center; padding:72px 20px 56px;}
+header img.profile {width:140px; height:140px; border-radius:50%; object-fit:cover; box-shadow:0 8px 28px rgba(0,0,0,.35)}
+header h1 {margin:16px 0 6px; font-size:32px; letter-spacing:.04em}
+header p.tag {color:#E2E8F0; margin:0 0 6px;}
+main {max-width:1040px; margin:0 auto; padding:48px 20px}
+section {margin-bottom:56px}
+section h2 {font-size:22px; border-left:6px solid var(--main); padding-left:12px; margin:0 0 18px}
+.card {background:#fff; border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,.06); padding:28px}
+.project {background:#fff; border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,.06); overflow:hidden; margin-bottom:28px}
+.project .hd {background:var(--main); color:#fff; padding:14px 20px; font-weight:700}
+.project .inner {padding:20px}
+figure {margin:0;}
+figure img {width:100%; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,.08)}
+figcaption {font-size:12px; color:#6B7280; margin-top:6px;}
+.table {width:100%; border-collapse:collapse; margin-top:12px}
+.table th, .table td {border:1px solid #edf2f7; padding:10px 12px; vertical-align:top}
+.table th {background:#f6f8fb; width:28%; font-weight:600}
+footer {text-align:center; color:#94A3B8; padding:40px 12px; border-top:1px solid #E5E9F0}
+.before-after {display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px}
+@media(max-width:900px){.before-after{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
 <header>
-<img src="T2WKKNBGC-U02GKSMF6PJ-a8ddf782f54c-512.jpg" alt="プロフィール写真" class="profile">
-<h2>尾畑 勇気</h2>
-<p>医療・NPO専門サイト制作 WEBディレクター</p>
-<p>医療機関やNPO法人など、専門性の高い業界を中心にWebサイトの企画・設計・進行を担当。<br>「構成」と「進行」の力で課題を可視化し、クライアントとユーザーの双方に価値を届けます。</p>
+  <img src="T2WKKNBGC-U02GKSMF6PJ-a8ddf782f54c-512.jpg" alt="プロフィール写真" class="profile">
+  <h1>尾畑 勇気</h1>
+  <p class="tag">医療・NPOサイト制作 Webディレクター</p>
+  <p class="tag">課題を把握し、構造を整えることで成果を最大化します。目標達成に向けて、問題解決と改善提案を積極的に行います。<br>依頼者のビジョンとユーザーのニーズを理解し、適切な情報設計を行うことで、使いやすく成果を出すウェブサイトの実現を目指します。</p>
 </header>
 <main>
-<section>
-<h2>概要・スキル</h2>
-<p>Webディレクターとして企画から制作・運用までを一貫して担当。UXリサーチで現状の課題を抽出し、情報設計やユーザーインタビューを基に構成案を作成。公開後はGA4やヒートマップ解析ツールでデータを分析し、改善を続ける。</p>
-</section>
-<section>
-<h2>プロジェクト事例</h2>
-<div class="project">
-<h3>大西脳神経外科病院</h3>
-<img src="old_onc.png" alt="大西脳神経外科病院リニューアルデザイン">
-<table>
-<tr><th>目的</th><td>診療科ごとの情報整理と採用応募の増加</td></tr>
-<tr><th>担当</th><td>構成・進行</td></tr>
-<tr><th>主な施策</th><td>UXリサーチ・情報設計・ワークショップ・要件整理</td></tr>
-<tr><th>効果</th><td>検査予約フォームCTR 20%向上、採用応募者数150%増</td></tr>
-</table>
-<a href="https://onishi-neurosurgery.com" class="button" target="_blank">公開サイト</a>
-</div>
-<div class="project">
-<h3>芳珠記念病院</h3>
-<img src="old_houju.png" alt="芳珠記念病院リニューアルデザイン">
-<table>
-<tr><th>目的</th><td>外来の診療案内のわかりやすさ向上と求人応募強化</td></tr>
-<tr><th>担当</th><td>構成・進行</td></tr>
-<tr><th>主な施策</th><td>UXリサーチ・キーワード選定・情報設計・ワイヤーフレーム作成</td></tr>
-<tr><th>効果</th><td>検索経由の外来案内ページ閲覧数180%増加、求人応募者数120%増</td></tr>
-</table>
-<a href="https://houju-hospital.com" class="button" target="_blank">公開サイト</a>
-</div>
-<div class="project">
-<h3>ギフト専門ECサイト</h3>
-<img src="old_gift.png" alt="ギフト専門ECサイトリニューアルデザイン">
-<table>
-<tr><th>目的</th><td>顧客体験向上によるCVR改善</td></tr>
-<tr><th>担当</th><td>構成・進行・デザイン監修</td></tr>
-<tr><th>主な施策</th><td>ユーザーペルソナ策定・カスタマージャーニーマップ作成・UIデザイン刷新</td></tr>
-<tr><th>効果</th><td>平均購入単価120%向上、CVR2.5%→4.5%</td></tr>
-</table>
-<a href="https://gift-specialty.com" class="button" target="_blank">公開サイト</a>
-</div>
-</section>
+  <section class="card">
+    <h2>仕事に対する理念</h2>
+    <p>課題を把握し、構造を整えることで成果を最大化します。目標達成に向けて、問題解決と改善提案を積極的に行います。<br>依頼者のビジョンとユーザーのニーズを理解し、適切な情報設計を行うことで、使いやすく成果を出すウェブサイトの実現を目指します。</p>
+  </section>
+
+  <section id="works">
+    <h2>実績紹介</h2>
+
+    <!-- 大西脳神経外科病院 -->
+    <div class="project">
+      <div class="hd">大西脳神経外科病院｜病院サイトリニューアル</div>
+      <div class="inner">
+        <div class="before-after">
+          <figure>
+            <img src="06db142e-9fae-4934-8546-ae802908e6ba.png" alt="旧サイト">
+            <figcaption>Before（旧サイト）</figcaption>
+          </figure>
+          <figure>
+            <img src="大西脳神経外科病院.png" alt="新サイト">
+            <figcaption>After（新サイト）</figcaption>
+          </figure>
+        </div>
+        <table class="table">
+          <tr><th>URL</th><td><a href="https://www.onc.akashi.hyogo.jp/" target="_blank">https://www.onc.akashi.hyogo.jp/</a></td></tr>
+          <tr><th>制作期間</th><td>約6ヶ月</td></tr>
+          <tr><th>チーム構成</th><td>メインディレクター1名／デザイナー2名／コーダー3名</td></tr>
+          <tr><th>制作目的</th><td>脳神経外科の患者数増加を目的に、強み訴求と信頼感を高めるデザインに刷新。</td></tr>
+          <tr><th>課題</th><td>強みが伝わらず、SEO対策も不十分だった。</td></tr>
+          <tr><th>改善</th><td>特長訴求・安心感のあるデザインへ一新し、コラムページを新設。</td></tr>
+          <tr><th>評価</th><td>スムーズな進行で高い評価をいただきました。</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 芳珠記念病院 -->
+    <div class="project">
+      <div class="hd">芳珠記念病院｜病院サイトリニューアル</div>
+      <div class="inner">
+        <div class="before-after">
+          <figure>
+            <img src="053efdf9-65ef-4d77-8879-2c5e91572e71.png" alt="旧サイト">
+            <figcaption>Before（旧サイト）</figcaption>
+          </figure>
+          <figure>
+            <img src="芳珠記念病院.png" alt="新サイト">
+            <figcaption>After（新サイト）</figcaption>
+          </figure>
+        </div>
+        <table class="table">
+          <tr><th>URL</th><td><a href="https://www.houju.or.jp/" target="_blank">https://www.houju.or.jp/</a></td></tr>
+          <tr><th>制作期間</th><td>約8ヶ月</td></tr>
+          <tr><th>チーム構成</th><td>メインディレクター1名／デザイナー2名／コーダー3名</td></tr>
+          <tr><th>制作目的</th><td>ユーザー体験の向上と地域コミュニティ連携の強化。</td></tr>
+          <tr><th>課題</th><td>古い設計で使いにくく、地域との接点が弱かった。</td></tr>
+          <tr><th>改善</th><td>UX重視の再設計と地域連携コンテンツの設置。</td></tr>
+          <tr><th>担当範囲</th><td>要件定義／情報設計／ワイヤーフレーム／進行・品質管理／撮影ディレクション</td></tr>
+          <tr><th>評価</th><td>円滑なディレクションで高い評価をいただきました。</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 麻生総合病院 -->
+    <div class="project">
+      <div class="hd">麻生総合病院｜医師募集LP</div>
+      <div class="inner">
+        <table class="table">
+          <tr><th>URL</th><td><a href="https://souseikai.net/asao-hosp/recruit/index.html" target="_blank">https://souseikai.net/asao-hosp/recruit/index.html</a></td></tr>
+          <tr><th>制作期間</th><td>約3ヶ月</td></tr>
+          <tr><th>チーム構成</th><td>メインディレクター1名／デザイナー1名／コーダー2名</td></tr>
+          <tr><th>制作目的</th><td>医師採用数の増加とミスマッチの解消。</td></tr>
+          <tr><th>課題</th><td>ターゲットが曖昧で、応募に繋がりにくかった。</td></tr>
+          <tr><th>改善</th><td>「どんな人が働きやすいか」を明確化したストーリー設計。</td></tr>
+          <tr><th>評価</th><td>企画・設計で高い評価をいただきました。</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- NPO法人gift -->
+    <div class="project">
+      <div class="hd">NPO法人 gift｜団体サイト制作</div>
+      <div class="inner">
+        <div class="before-after">
+          <figure>
+            <img src="28b6e317-53f6-41f2-a665-9a5f43a9a482.png" alt="旧サイト">
+            <figcaption>Before（旧サイト）</figcaption>
+          </figure>
+          <figure>
+            <img src="ChatGPT Atlas 2025-10-30 14.45.30.png" alt="新サイト">
+            <figcaption>After（新サイト）</figcaption>
+          </figure>
+        </div>
+        <table class="table">
+          <tr><th>URL</th><td><a href="https://npo-gift.com/" target="_blank">https://npo-gift.com/</a></td></tr>
+          <tr><th>制作期間</th><td>約5ヶ月</td></tr>
+          <tr><th>チーム構成</th><td>ディレクター2名／デザイナー2名／コーダー3名</td></tr>
+          <tr><th>制作目的</th><td>活動の広報と寄付者の増加。</td></tr>
+          <tr><th>課題</th><td>活動の理念や意義が十分に伝わっていなかった。</td></tr>
+          <tr><th>改善</th><td>「夢」を軸に活動を再構成し、理念と意義を一貫して伝達。</td></tr>
+          <tr><th>評価</th><td>活動が潜在寄付者に伝わりやすくなり寄付者が増加。</td></tr>
+        </table>
+      </div>
+    </div>
+
+  </section>
 </main>
-<footer>
-<p>© 2025 尾畑 勇気. All rights reserved. | <a href="mailto:contact@example.com">お問い合わせ</a></p>
-</footer>
+<footer>© 2025 Yuki Obata Portfolio</footer>
 </body>
 </html>
